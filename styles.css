@@ -1,7 +1,14 @@
 *{
     margin: 0;
     border: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.bebas-neue-regular {
+    font-family: "Bebas Neue";
+    font-weight: 600;
+    font-style: normal;
+  }
+  
 .navbar{
     height: 60px;
     background-color:#21211e;
@@ -39,6 +46,29 @@ a:hover{
 .home{
     height: 500px;
     width: 100%;
+    display: flex;
+    align-items: center;
     background-image: url("home.jpg");
     background-size: cover;
+    color: white;
+}
+
+.text{
+    margin-left: 12%;
+    font-size: 1.1rem;
+    line-height: 90%;
+}
+#home-heading{
+    font-size: 8rem;
+    line-height:90%;
+}
+.highlight{
+    color: red;
+}
+.home-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.findme{
+    margin-top: 3%;
+    font-size: 1.1rem;
 }
