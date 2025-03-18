@@ -1,8 +1,44 @@
-p
+*{
+    margin: 0;
+    border: border-box;
+}
+.navbar{
+    height: 60px;
+    background-color:#21211e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo{
+    margin-left: 15px;
+    height: 50px;
+    width:125px;
+}
+.logo
 {
-    color:red;
-    font-size: 100px;
-    padding-top: 100px;
-    text-align: center;
+    background-image: url("logoname2.png");
+    height: 50px;
+    background-size: cover;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+}
+.navbar .nav-links{
+    margin-right: 12px;
+    display: flex;
+    gap: 20px;
 }
 
+a:hover{
+    color: red;
+}
+.home{
+    height: 500px;
+    width: 100%;
+    background-image: url("home.jpg");
+    background-size: cover;
+}
