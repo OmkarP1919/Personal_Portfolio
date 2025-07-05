@@ -27,18 +27,40 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: rgba(15, 15, 15, 0.9);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            border-radius: 50px;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
         }
 
-        .nav-logo .logo {
-            background-image: url("logoname2.png");
+        header.scrolled {
+            background: rgba(15, 15, 15, 0.95);
+            padding: 0.5rem 2rem;
+            width: 90%;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
             height: 50px;
-            background-size: cover;
-            width: 125px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            margin-right: 10px;
+            background-color: #fff;
         }
 
         .nav-links a {
@@ -185,9 +207,9 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="nav-logo">
-            <div class="logo"></div>
+            <img src="logoname2.png" alt="Company Logo">
         </div>
 
         <div class="nav-links">
@@ -228,5 +250,16 @@
         </div>
     </div>
 
+    <script>
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', function() {
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
