@@ -123,3 +123,25 @@ a:hover{
     background-size: cover;
     color: white;
 }
+.home::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,0,0,0.5), transparent 70%);
+    top: -100px;
+    right: -150px;
+    animation: float 8s ease-in-out infinite alternate;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(30px); }
+}
+
+.home {
+    position: relative;
+    overflow: hidden;
+}
