@@ -14,10 +14,13 @@
       font-family: 'Poppins', sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #0a0a0a;
       color: #fff;
-      scroll-behavior: smooth;
       line-height: 1.6;
     }
 
@@ -28,11 +31,9 @@
       padding: 1rem 2rem;
       background: rgba(255, 255, 255, 0.05);
       position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 85%;
-      border-radius: 50px;
+      top: 0;
+      left: 0;
+      width: 100%;
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
       z-index: 1000;
@@ -42,19 +43,16 @@
     header.scrolled {
       background: rgba(15, 15, 15, 0.95);
       padding: 0.5rem 2rem;
-      width: 90%;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
     }
 
     .nav-logo img {
-      height: 55px;
+      height: 50px;
       width: auto;
-      object-fit: contain;
-      background: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -63,7 +61,6 @@
       margin-left: 20px;
       font-weight: 600;
       position: relative;
-      transition: color 0.3s ease;
     }
 
     .nav-links a::after {
@@ -73,13 +70,6 @@
       width: 0;
       background: #ff4d4d;
       transition: width 0.3s ease;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-    }
-
-    .nav-links a:hover {
-      color: #ff4d4d;
     }
 
     .nav-links a:hover::after {
@@ -89,43 +79,31 @@
     .home {
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('home.jpg') no-repeat center center/cover;
+      align-items: center;
+      background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('home.jpg') no-repeat center center/cover;
+      padding: 4rem 1rem;
       text-align: center;
-      padding: 2rem;
     }
 
     .text h1 {
       font-family: 'Inter', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 600;
+      font-size: 2rem;
       color: #ccc;
-      margin-bottom: -10px;
     }
 
     .text h2 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 5.2rem;
+      font-size: 4rem;
       color: #fff;
-      margin-top: 0;
-    }
-
-    .highlight {
-      color: #ff4d4d;
     }
 
     .Icons {
-      margin: 1rem 0;
       display: flex;
-      justify-content: center;
       gap: 15px;
-      font-size: 1.6rem;
-    }
-
-    .Icons i {
-      cursor: pointer;
-      transition: transform 0.3s, color 0.3s;
+      margin: 1rem 0;
+      font-size: 1.5rem;
     }
 
     .Icons i:hover {
@@ -134,71 +112,75 @@
     }
 
     .cv_down {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
+      background: #ff4d4d;
       padding: 10px 20px;
       border-radius: 25px;
-      background: #ff4d4d;
       color: #fff;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-top: 1rem;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .cv_down:hover {
-      transform: translateY(-3px);
     }
 
     .about {
-      background: #1e1e1e;
-      padding: 4rem 2rem;
-      text-align: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      background: #1e1e1e;
       gap: 2rem;
     }
 
     .about img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
+      max-width: 350px;
+      border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
 
     .about-content {
-      max-width: 600px;
-      text-align: left;
+      max-width: 500px;
+      text-align: center;
     }
 
-    .about h2 {
-      font-size: 3rem;
+    .about-content h2 {
+      font-size: 2.5rem;
       color: #ff4d4d;
-      margin-bottom: 1rem;
     }
 
-    .about p {
-      font-size: 1.1rem;
+    .about-content p {
       color: #ddd;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     @media (max-width: 768px) {
+      .text h2 {
+        font-size: 2.8rem;
+      }
+
+      .text h1 {
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+      }
+
+      header:hover .nav-links {
+        display: flex;
+      }
+
       .about {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .about-content {
-        text-align: center;
-      }
-
-      .about img {
-        margin: 0 auto;
+        flex-direction: column;
       }
     }
   </style>
@@ -210,17 +192,17 @@
       <img src="logoname2.png" alt="Logo">
     </div>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About Me</a>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
       <a href="#">Skills</a>
       <a href="#">Experience</a>
       <a href="#">Contact</a>
     </div>
   </header>
 
-  <section class="home">
+  <section class="home" id="home">
     <div class="text">
-      <h1 style="margin-bottom: -10px;">Hello I'm</h1>
+      <h1>Hello I'm</h1>
       <h2><span class="highlight">Omkar Potangale</span></h2>
       <p>A passionate Web/Software Developer</p>
       <div class="Icons">
@@ -237,11 +219,11 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <img src="https://source.unsplash.com/400x400/?technology,code" alt="About Me Image">
     <div class="about-content">
       <h2>About Me</h2>
-      <p>I'm Omkar Potangale, a passionate Information Technology student deeply invested in creating smart, elegant, and user-friendly digital solutions. With a love for web development and software innovation, I strive to bring ideas to life through clean code and intuitive design. I enjoy collaborating with creative minds and continuously seek opportunities to learn and grow in the ever-evolving tech landscape.</p>
+      <p>I'm Omkar Potangale, an IT student passionate about creating smart, elegant, and user-friendly digital solutions. I love building web projects and constantly strive to enhance my skills through learning and collaboration.</p>
     </div>
   </section>
 
