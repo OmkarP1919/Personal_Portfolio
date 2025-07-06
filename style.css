@@ -79,10 +79,11 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('home\ \(1\).webp') no-repeat center center/cover;
+  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('Images/home (1).webp') no-repeat center center/cover;
   text-align: center;
   padding: 2rem;
 }
+
 
 .text h1 {
   font-family: 'Bebas Neue', sans-serif;
