@@ -79,7 +79,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('home.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('home\ \(1\).webp') no-repeat center center/cover;
   text-align: center;
   padding: 2rem;
 }
@@ -245,6 +245,12 @@ header.scrolled {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+.experience h2 {
+  color: #ff4d4d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .experience-quote {
   font-size: 1.4rem;
   line-height: 1.8;
@@ -253,6 +259,54 @@ header.scrolled {
   font-style: italic;
 }
 
+.projects {
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  color: #ff4d4d;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: #ff4d4d;
+  margin-bottom: 0.5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
 
 
 .footer {
