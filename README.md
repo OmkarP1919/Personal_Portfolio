@@ -61,7 +61,6 @@ git clone https://github.com/OmkarP1919/Personal_Portfolio.git
 ## 📞 Contact Me
 
 * 📧 Email: [omkarpotangale@gmail.com](mailto:omkarpotangale@gmail.com)
-* 💬 WhatsApp: [+91 99211 70002](https://wa.me/919921170002)
 * 🔗 LinkedIn: *https://www.linkedin.com/in/omkarpotangale/*
 
 ---
