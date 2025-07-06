@@ -49,19 +49,38 @@
     <p>I am an Information Technology student with a deep interest in crafting beautiful websites and smart applications. Always learning, always building!</p>
   </section>
 
-  <section class="skills" id="skills">
-    <h2>My Skills</h2>
+ <section class="skills" id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skills-category">
+    <h3>Programming Languages</h3>
     <div class="skills-grid">
-      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML5</p></div>
-      <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
-      <div class="skill-card"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
-      <div class="skill-card"><i class="fab fa-react"></i><p>React</p></div>
-      <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
-      <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
+      <div class="skill-card"><i class="fas fa-code"></i><p>C</p></div>
       <div class="skill-card"><i class="fas fa-code"></i><p>C++</p></div>
-      <div class="skill-card"><i class="fas fa-cloud"></i><p>Cloud Basics</p></div>
+      <div class="skill-card"><i class="fas fa-code"></i><p>C# .NET</p></div>
+      <div class="skill-card"><i class="fab fa-java"></i><p>Java</p></div>
+      <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
     </div>
-  </section>
+  </div>
+
+  <div class="skills-category">
+    <h3>Tools & Frameworks</h3>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fas fa-chart-line"></i><p>Data Analysis</p></div>
+      <div class="skill-card"><i class="fas fa-chart-pie"></i><p>Power BI</p></div>
+      <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Web Technologies</h3>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML/CSS</p></div>
+    </div>
+  </div>
+</section>
+
+
 
   <section class="experience" id="experience">
     <h2>Experience</h2>
@@ -115,6 +134,25 @@
       header.classList.toggle('scrolled', window.scrollY > 50);
     });
   </script>
+
+  <script>
+  const skillCards = document.querySelectorAll('.skill-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  skillCards.forEach(card => {
+    observer.observe(card);
+  });
+</script>
 
 </body>
 </html>
