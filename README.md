@@ -13,6 +13,7 @@ A modern, responsive **Personal Portfolio Website** built using **HTML**, **CSS*
 Personal_Portfolio
 ├── index.html
 ├── style.css
+├── CNAME
 ├── images/
 │   ├── logoname2.png
 │   ├── home(1).webp
