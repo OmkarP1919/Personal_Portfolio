@@ -432,9 +432,6 @@ header.scrolled {
 
 
 
-
-
-
 /* Media Queries */
 @media (max-width: 992px) {
   .nav-links a {
@@ -488,3 +485,4 @@ header.scrolled {
     font-size: 0.8rem;
   }
 }
+
