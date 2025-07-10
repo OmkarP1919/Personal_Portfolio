@@ -30,11 +30,11 @@
       <h2><span class="highlight">Omkar Potangale</span></h2>
       <p>A passionate Web/Software Developer</p>
       <div class="Icons">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-whatsapp"></i>
-        <i class="fab fa-telegram"></i>
+        <a href="https://www.linkedin.com/in/omkarpotangale"><i class="fab fa-linkedin" style="color: white;"></i></a>
+        <a href="https://www.instagram.com/omkar_potangale"><i class="fab fa-instagram" style="color: white;"></i></a>
+        <a href="https://github.com/OmkarP1919"><i class="fab fa-github" style="color: white;"></i></a>
+        <a href="https://wa.me/+919921170002"><i class="fab fa-whatsapp" style="color: white;"></i></a>
+        <a href="https://t.me/omkar_potangale"><i class="fab fa-telegram" style="color: white;"></i></a>
       </div>
       <div class="cv_down">
         <i class="fas fa-download"></i>
@@ -54,7 +54,7 @@
   <div class="skills-category">
     <h3>Programming Languages</h3>
     <div class="skills-grid">
-      <div class="skill-card"><i class="fas fa-code"></i><p>C</p></div>
+      <div class="skill-card"><i class="fa-sharp fa-solid fa-c"></i><p>C</p></div>
       <div class="skill-card"><i class="fas fa-code"></i><p>C++</p></div>
       <div class="skill-card"><i class="fas fa-code"></i><p>C# .NET</p></div>
       <div class="skill-card"><i class="fab fa-java"></i><p>Java</p></div>
@@ -123,32 +123,6 @@
       &copy; 2025 Omkar Potangale. All rights reserved.
     </div>
   </footer>
-
-  <script>
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-  </script>
-
-  <script>
-  const skillCards = document.querySelectorAll('.skill-card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationDelay = `${Math.random() * 0.3}s`;
-        entry.target.classList.add('show');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  skillCards.forEach(card => {
-    observer.observe(card);
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
