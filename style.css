@@ -509,14 +509,14 @@ header.scrolled {
 /* For screens smaller than 600px (typical mobile) */
 @media (max-width: 600px) {
   #preloader img {
-    width: 180px;  /* Increase this if still too small, e.g., 120px or 130px */
+    width: 170px;  /* Increase this if still too small, e.g., 120px or 130px */
   }
 }
 
 /* For very small screens (e.g., phones in portrait) */
 @media (max-width: 400px) {
   #preloader img {
-    width: 180px;  /* Boost size more here if needed */
+    width: 160px;  /* Boost size more here if needed */
   }
 }
 
