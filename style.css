@@ -516,7 +516,7 @@ header.scrolled {
 /* For very small screens (e.g., phones in portrait) */
 @media (max-width: 400px) {
   #preloader img {
-    width: 2000px;  /* Boost size more here if needed */
+    width: 200px;  /* Boost size more here if needed */
   }
 }
 
