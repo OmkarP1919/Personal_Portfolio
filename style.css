@@ -363,6 +363,7 @@ header.scrolled {
 
 .project-card img {
   width: 100%;
+  height:min-content;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -376,6 +377,31 @@ header.scrolled {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0,0,0,0.6);
 }
+
+.github-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  padding: 8px 18px;
+  border: 2px solid #ff4d4d;
+  background: transparent;
+  color: #ff4d4d;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+  background: #ff4d4d;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+
+
 
 
 .footer {
@@ -509,20 +535,20 @@ header.scrolled {
 /* For screens smaller than 600px (typical mobile) */
 @media (max-width: 600px) {
   #preloader img {
-    width: 170px;  /* Increase this if still too small, e.g., 120px or 130px */
+    width: 200px;  /* Increase this if still too small, e.g., 120px or 130px */
   }
 }
 
 /* For very small screens (e.g., phones in portrait) */
 @media (max-width: 400px) {
   #preloader img {
-    width: 160px;  /* Boost size more here if needed */
+    width: 200px;  /* Boost size more here if needed */
   }
 }
-
 
 #preloader.fade-out {
   opacity: 0;
   visibility: hidden;
 }
+
 
