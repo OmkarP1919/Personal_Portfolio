@@ -145,29 +145,152 @@ header.scrolled {
   transform: translateY(-3px);
 }
 
+
+/* === About Me Section === */
 .about {
-  background: #1e1e1e;
-  padding: 6rem 2rem 4rem;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 4rem 1rem;
+  color: #fff;
 }
 
-.about h2 {
-  font-size: 3rem;
-  color: #ff4d4d;
-  margin-bottom: 1rem;
-}
-
-.about p {
-  max-width: 800px;
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-  font-size: 1.2rem;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 2rem;
+}
+
+.bio {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: #ccc;
+  font-size: 1.15rem;
+}
+
+.about-section {
+  margin-top: 3rem;
+}
+
+.about-section h3 {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 2rem;
+}
+
+/* === Education Timeline === */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 2px solid #ff4d4d;
+}
+
+.timeline-item {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.timeline-content span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* === Certifications Grid === */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  color: #fff;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #ff4d4d;
+}
+
+.cert-card p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.cert-card span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* === Certifications Link to LinkedIn === */
+.cert-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ff4d4d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cert-link:hover {
+  color: #ff9999;
+}
 .skills {
   background: #111;
   color: #fff;
@@ -511,6 +634,33 @@ header.scrolled {
     font-size: 0.8rem;
   }
 }
+
+/* === Responsive Timeline (vertical on mobile) === */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    border-top: none;
+    border-left: 2px solid #ff4d4d;
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    top: 0;
+    left: -12px;
+    transform: none;
+  }
+
+  .timeline-content {
+    margin-top: 0.5rem;
+  }
+}
+
+
 
 #preloader {
   position: fixed;
