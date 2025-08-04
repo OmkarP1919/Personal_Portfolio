@@ -776,4 +776,71 @@ header.scrolled {
   }
 }
 
+/* Fix too much gap between Omkar and Potangale */
+.home h1 {
+  margin-bottom: 0.3rem;
+}
+
+.home h2 {
+  margin-top: 0.3rem;
+}
+
+/* Add spacing above icons */
+.btn-group {
+  margin-bottom: 1.5rem; /* more space between buttons and icons */
+}
+
+/* Make social icons visible and well-spaced */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.4rem; /* increased size */
+}
+
+.social-icons a {
+  color: #94a3b8;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 10rem; /* prevent overlap with navbar */
+  }
+
+  .home h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .home h2 {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .social-icons {
+    gap: 1.2rem;
+    font-size: 1.5rem; /* increased for mobile */
+  }
+
+  .btn-group {
+    margin-bottom: 1.6rem; /* better spacing before icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    font-size: 1.4rem;
+    gap: 1rem;
+  }
+}
+
+
+
 
