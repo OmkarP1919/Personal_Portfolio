@@ -675,7 +675,7 @@ header.scrolled {
 
 
 .home {
-  padding-top: 8rem; 
+  padding-top: 6rem; 
 }
 .btn-group {
   margin-bottom: 0.8rem;
@@ -702,7 +702,7 @@ header.scrolled {
 
 @media (max-width: 768px) {
   .home {
-    padding-top: 10rem; /* Push content lower below fixed navbar */
+    padding-top: 8rem; /* Push content lower below fixed navbar */
   }
 }
 
@@ -755,7 +755,7 @@ header.scrolled {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .home {
-    padding-top: 10rem; /* prevent overlap with navbar */
+    padding-top: 8rem; /* prevent overlap with navbar */
   }
 
   .home h1 {
@@ -859,6 +859,7 @@ header.scrolled {
     gap: 1rem;
   }
 }
+
 
 
 
