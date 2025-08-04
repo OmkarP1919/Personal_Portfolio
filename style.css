@@ -729,3 +729,29 @@ header.scrolled {
 }
 
 
+
+.home {
+  padding-top: 8rem; 
+}
+.btn-group {
+  margin-bottom: 0.8rem;
+}
+
+.social-icons {
+  gap: 1.2rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 0.9rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 0.7rem;
+    font-size: 1rem;
+  }
+}
