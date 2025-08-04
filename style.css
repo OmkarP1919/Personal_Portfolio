@@ -816,6 +816,50 @@ header.scrolled {
   }
 }
 
+/* ✅ Make GitHub + LinkedIn buttons stay side-by-side */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping if screen too small */
+  justify-content: center;
+  gap: 1rem; /* spacing between buttons */
+}
+
+/* ✅ Slightly reduce social icon size */
+.social-icons a i {
+  font-size: 1.3rem;
+}
+
+/* ✅ Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .btn-group {
+    flex-wrap: nowrap; /* force single row on tablets and phones */
+  }
+
+  .social-icons {
+    gap: 1.2rem;
+  }
+
+  .social-icons a i {
+    font-size: 1.2rem; /* slightly smaller */
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .social-icons a i {
+    font-size: 1.1rem; /* slightly smaller again */
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+}
+
 
 
 
