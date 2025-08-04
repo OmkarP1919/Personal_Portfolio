@@ -755,3 +755,25 @@ header.scrolled {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding-top: 10rem; /* Push content lower below fixed navbar */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.4rem 1.5rem;
+  }
+
+  .nav-logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+
+
