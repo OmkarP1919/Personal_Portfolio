@@ -209,62 +209,6 @@ header.scrolled {
   margin-bottom: 2rem;
 }
 
-/* === Education Timeline === */
-.timeline {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  gap: 20px;
-  padding: 20px 0;
-  border-top: 2px solid #ff4d4d;
-}
-
-.timeline-item {
-  flex: 1;
-  position: relative;
-  text-align: center;
-}
-
-.timeline-item::before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: #ff4d4d;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
-}
-
-.timeline-content {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
-  margin-top: 1rem;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.timeline-content h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-
-.timeline-content p {
-  margin: 0;
-  color: #ccc;
-  font-size: 0.95rem;
-}
-
-.timeline-content span {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.85rem;
-  color: #aaa;
-}
 
 /* === Certifications Grid === */
 .certifications-grid {
@@ -840,6 +784,39 @@ header.scrolled {
     gap: 1rem;
   }
 }
+/* Force consistent icon size on all screens */
+.social-icons a i {
+  font-size: 1.8rem; /* Set a fixed size for all icons */
+}
+
+/* Adjust spacing */
+.social-icons {
+  gap: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .social-icons a i {
+    font-size: 2rem; /* Increase size on mobile */
+  }
+
+  .social-icons {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons a i {
+    font-size: 2.2rem; /* Even bigger on very small screens */
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+}
+
+
 
 
 
